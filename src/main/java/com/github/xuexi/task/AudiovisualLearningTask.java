@@ -26,7 +26,7 @@ public class AudiovisualLearningTask extends Task {
 		
 		var doneNumber = 0;
 		while(doneNumber < progress.toDoNumber()) {
-			homePage.enterNextShortAudio().watch();
+			homePage.enterNextShortAudio().watchShort();
 			doneNumber++;
 		}
 		
@@ -35,7 +35,7 @@ public class AudiovisualLearningTask extends Task {
 
 	@Override
 	public boolean isEnable() {
-		return false;
+		return !progress.finished();
 	}
 
 }

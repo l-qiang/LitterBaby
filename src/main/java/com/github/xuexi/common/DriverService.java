@@ -44,6 +44,10 @@ public class DriverService {
 	
 	public AndroidElement findElementByXPath(String xpath) {
 		waitElementByXPathPresence(xpath);
+		return findElementByXPathNoWait(xpath);
+	}
+	
+	public AndroidElement findElementByXPathNoWait(String xpath) {
 		return androidDriver.findElementByXPath(xpath);
 	}
 	

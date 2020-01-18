@@ -70,6 +70,13 @@ public class HomePage implements Page{
 		audio.click();
 		return pageFactory.audioPage();
 	}
+	
+	public AudioPage enterNextLongAudio() {
+		switchToNewsTab(); // 看联播频道的很稳
+		waitAudioClickable();
+		driverService.findElementByXPath(homeXPath.getAudio()).click();
+		return pageFactory.audioPage();
+	}
 
 	private void waitArticleClickable() {
 		driverService.waitElementClickable(homeXPath.getArticle());
