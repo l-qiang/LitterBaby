@@ -12,7 +12,7 @@ public class ShareTask extends ReadArticleTask {
 
 
 	protected ShareTask(Progress progress) {
-		super(progress);
+		super(new Progress(0, 2));
 	}
 
 	@Override
