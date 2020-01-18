@@ -138,9 +138,13 @@ public class HomePage implements Page{
 	}
 	
 	public void localChannelXuexi() {
-		driverService.findElementByXPath(homeXPath.getChannelXuexi()).click();
-		waitCurrentPageOver();
-		driverService.back();
+		try {
+			driverService.findElementByXPath(homeXPath.getChannelXuexi()).click();
+			waitCurrentPageOver();
+		} finally {
+			driverService.back();
+		}
+		
 	}
 	
 	private List<AndroidElement> articleElements() {

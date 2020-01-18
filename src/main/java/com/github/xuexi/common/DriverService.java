@@ -144,6 +144,10 @@ public class DriverService {
 	}
 	
 	public void back() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+		}
 		androidDriver.navigate().back();
 	}
 	
