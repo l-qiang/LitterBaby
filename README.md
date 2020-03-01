@@ -33,7 +33,7 @@
 JDK和Android SDK的安装网上都能找到教程，Appium Desktop启动后要配置JAVA_HOME和ANDROID_HOME
 夜神模拟器启动后，要确保命令行运行adb devices能找到设备（可能需要将SDK中的adb覆盖掉夜神模拟器的adb和nox_adb）
 
-### application.properties
+### xxqg.properties
 修改学习强国的用户名和密码
 ```
 user.phoneNum=
